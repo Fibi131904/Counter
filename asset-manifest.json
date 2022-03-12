@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Fibi131904/Counter.git/static/css/main.464cef72.css",
+    "main.js": "/Fibi131904/Counter.git/static/js/main.b8cd826b.js",
+    "static/js/787.0c3f432a.chunk.js": "/Fibi131904/Counter.git/static/js/787.0c3f432a.chunk.js",
+    "index.html": "/Fibi131904/Counter.git/index.html",
+    "main.464cef72.css.map": "/Fibi131904/Counter.git/static/css/main.464cef72.css.map",
+    "main.b8cd826b.js.map": "/Fibi131904/Counter.git/static/js/main.b8cd826b.js.map",
+    "787.0c3f432a.chunk.js.map": "/Fibi131904/Counter.git/static/js/787.0c3f432a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.464cef72.css",
+    "static/js/main.b8cd826b.js"
+  ]
+}
