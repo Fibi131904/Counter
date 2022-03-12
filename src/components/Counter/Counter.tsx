@@ -1,4 +1,5 @@
 
+import { error } from 'console';
 import React  from 'react';
 import { Button } from '../Button/Button';
 import s from './Counter.module.css';
@@ -17,14 +18,18 @@ type CounterPropsType = {
 }
 
 export const Counter = (props: CounterPropsType) => {
-
 const classNameTablo = `${s.tablo} ${props.count === props.finishNumber ? s.maximum : ''}`
+
+const error = props.startNumber>= props.finishNumber? 'Inccorect value!': ''
+const display = error? error:props.count
+
 
     return (
 
         <div className={s.counter}>
 
-            <div className={classNameTablo} > {props.count} </div>
+            <div className={classNameTablo} > {display} </div>
+
             <Button name={'Inc'}
                 callBack={props.callBack}
                 disabled={props.count >= props.finishNumber}
@@ -32,6 +37,7 @@ const classNameTablo = `${s.tablo} ${props.count === props.finishNumber ? s.maxi
             <Button name={'Reset'}
                 callBack={props.calBackReset}
                 // disabled={props.startNumber === props.startValue}
+                // disabled={props.count === props.startValue}
                 disabled={props.count === props.startValue}
             />
 

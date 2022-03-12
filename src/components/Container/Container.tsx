@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Counter } from '../Counter/Counter';
 import { Settings } from '../Settings/Settings';
+import s from './Container.module.css';
+
 
 
 export const Container = () => {
     const startValue = 0;
     const maxValue = 5;
-
     const [count, setCount] = useState(startValue)
     let [startNumber, setStartNumber] = useState(startValue) //для кнопки стартовое значение
     let [finishNumber, setFinishNumber] = useState(maxValue) // для кнопки финишное значение
@@ -18,38 +19,30 @@ export const Container = () => {
             setCount(newValue)
     }
     const reset = () => {
-        setStartNumber(startValue)
+         setCount(startValue)
     }
     const set = () => {
         setCount(startNumber)
         localStorage.setItem('counterValue', JSON.stringify(startNumber))
         localStorage.setItem('startValue', JSON.stringify(startNumber))
         localStorage.setItem('finishValue', JSON.stringify(finishNumber))
-
     }
-
 
 
     useEffect(() => {
         let valueAsString = localStorage.getItem('counterValue')
-
         if (valueAsString) {
             let newValue = JSON.parse(valueAsString)
             setCount(newValue)
         }
-
     }, [])
 
     useEffect(() => {
         const rememberStartValue = localStorage.getItem('startValue')
-
-
         if (rememberStartValue) {
             let newS = JSON.parse(rememberStartValue)
             setStartNumber(newS)
         }
-
-
     }, [])
 
     useEffect(() => {
@@ -60,11 +53,18 @@ export const Container = () => {
             let newF = JSON.parse(rememberFinishValue)
             setFinishNumber(newF)
         }
-
     }, [])
     return (
 
-        <>
+        <div className={s.container}>
+
+            <Settings
+                startNumber={startNumber}
+                setStartNumber={setStartNumber}
+                finishNumber={finishNumber}
+                setFinishNumber={setFinishNumber}
+                callBackSet={set}
+            />
             <Counter
                 startNumber={startNumber}
                 setStartNumber={setStartNumber}
@@ -77,14 +77,6 @@ export const Container = () => {
                 startValue={startValue}
                 maxValue={maxValue}
             />
-            <Settings
-                startNumber={startNumber}
-                setStartNumber={setStartNumber}
-                finishNumber={finishNumber}
-                setFinishNumber={setFinishNumber}
-                callBackSet={set}
-            />
-
-        </>
+        </div>
     )
 }

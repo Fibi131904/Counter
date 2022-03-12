@@ -1,4 +1,4 @@
-
+import s from './Input.module.css';
 
 type InputType = {
     onChangeInputValue: (title: number) => void
@@ -12,7 +12,13 @@ export const Input = (props: InputType) => {
         props.onChangeInputValue(+event.currentTarget.value);
     }
     return (
-        <input onChange={onChangeInputHandler} type='number' min="0" value={props.inputValue} />
+        <input
+            className={s.inputTablo}
+            onChange={onChangeInputHandler}
+            type='number'
+            min="0"
+            value={props.inputValue}
+        />
     )
 
 }

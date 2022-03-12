@@ -1,27 +1,25 @@
 .counter {
 
     margin: 50px;    
-    border: 1px solid grey;  
+    border: 4px solid grey;  
     width: 250px;
     height: 140px;
     border-radius: 5px;
     text-align: center;
     background-color: cadetblue;
-    
 }
-
-.tablo {
+  .tablo {
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(21, 240, 21);
-    width: 90px;
+    width: 200px;
     height: 40px;
     padding: 15px;
-    border: 2px solid grey;
+    border: 3px solid grey;
     font-size: 25px;
     border-radius: 5px;
-}  
+}
 
 .maximum {
       color: red;
