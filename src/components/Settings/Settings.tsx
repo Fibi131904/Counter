@@ -1,7 +1,8 @@
-import React  from 'react';
+
 import { Button } from '../Button/Button';
 import { Input } from '../Input/Input';
 import s from './Settings.module.css';
+
 
 
 
@@ -12,11 +13,12 @@ type SettingsPropsType= {
     startNumber: number
     setFinishNumber: (finishNumber:number)=> void
     callBackSet: ()=> void
-   
+    
   
 
 }
 export const Settings = (props: SettingsPropsType) => {
+
     return (
 
         <div className={s.settings}>

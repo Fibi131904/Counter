@@ -13,7 +13,7 @@ export const Input = (props: InputType) => {
     }
     return (
         <input
-            className={s.inputTablo}
+            className={s.inputDisplay}
             onChange={onChangeInputHandler}
             type='number'
             min="0"
