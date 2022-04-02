@@ -20,11 +20,7 @@
     font-size: 25px;
     border-radius: 5px;
 }
-
-.maximum {
-      color: red;
-  
-}
-.error {
+.errorMessage {
   color: red;
-}
+ }
+

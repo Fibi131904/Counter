@@ -8,10 +8,15 @@
       text-align: center;
       background-color: cadetblue;
   }
-
+  
   
 
 .maximum {
       color: red;
   
 }
+.error {
+      border: red 1px solid;
+     }
+     
+    

@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import s from './Input.module.css';
 
 type InputType = {
     onChangeInputValue: (title: number) => void
     inputValue: number
-
+    error?:boolean 
+    
 }
 export const Input = (props: InputType) => {
 
@@ -11,9 +13,11 @@ export const Input = (props: InputType) => {
     const onChangeInputHandler = (event: any) => {
         props.onChangeInputValue(+event.currentTarget.value);
     }
+     const classNameInputDisplayHandler = props.error? `${s.inputDisplay} ${s.error } `: s.inputDisplay
     return (
         <input
-            className={s.inputDisplay}
+
+            className={classNameInputDisplayHandler}
             onChange={onChangeInputHandler}
             type='number'
             min="0"

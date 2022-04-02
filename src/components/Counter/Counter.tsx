@@ -1,4 +1,4 @@
-import React  from 'react';
+import React, { useState }  from 'react';
 import { Button } from '../Button/Button';
 import s from './Counter.module.css';
 
@@ -12,20 +12,20 @@ type CounterPropsType = {
     finishNumber: number
     setFinishNumber: (finishNumber: number) => void
     startValue: number
-    maxValue: number
-}
+    error: boolean
+}  
 
 export const Counter = (props: CounterPropsType) => {
-const classNameTablo = `${s.tablo} ${props.count === props.finishNumber ? s.maximum : ''}` 
-const error = props.startNumber>= props.finishNumber? 'Inccorect value!': ''
-const display = error? error:props.count
-const classNameDisplay =  `${s.tablo} ${error? s.error: classNameTablo} `
+
+
+    const classNameFinishStyle = props.count >= props.finishNumber ? `${s.tablo} ${s.errorMessage} ` : s.tablo
 
     return (
 
         <div className={s.counter}>
 
-            <div className={classNameDisplay} > {display} </div>
+            <div className={classNameFinishStyle} > {props.error ? <span className={s.errorMessage}>Error</span> : props.count} </div>
+
 
             <Button name={'Inc'}
                 callBack={props.callBack}
