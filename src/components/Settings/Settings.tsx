@@ -1,5 +1,4 @@
-
-import { useState } from 'react';
+import React  from 'react';
 import { Button } from '../Button/Button';
 import { Input } from '../Input/Input';
 import s from './Settings.module.css';

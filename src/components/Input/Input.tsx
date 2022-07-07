@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React  from 'react';
 import s from './Input.module.css';
 
 type InputType = {
