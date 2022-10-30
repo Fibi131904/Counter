@@ -24,7 +24,7 @@ export const Counter = (props: CounterPropsType) => {
     return (
 
         <div className={s.counter}>
-            <div className={s.display} > {display} </div>
+            <div className={classNameDisplay} > {display} </div>
             <div className={s.buttonBlock}>
             <Button name={'Inc'}
                 callBack={props.callBack}
