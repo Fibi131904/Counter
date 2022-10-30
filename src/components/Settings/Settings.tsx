@@ -17,7 +17,9 @@ export const Settings = (props: SettingsPropsType) => {
         <div className={s.settings}>
             <Input onChangeInputValue={props.setStartNumber} inputValue={props.startNumber} />
             <Input onChangeInputValue={props.setFinishNumber} inputValue={props.finishNumber} />
+           <div className={s.buttonBlock}>
             <Button name={'Set'} callBack={props.callBackSet} disabled={false} />
+        </div>
         </div>
     )
 }

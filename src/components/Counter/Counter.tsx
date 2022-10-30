@@ -24,7 +24,8 @@ export const Counter = (props: CounterPropsType) => {
     return (
 
         <div className={s.counter}>
-            <div className={classNameDisplay} > {display} </div>
+            <div className={s.display} > {display} </div>
+            <div className={s.buttonBlock}>
             <Button name={'Inc'}
                 callBack={props.callBack}
                 disabled={props.count >= props.finishNumber}
@@ -33,6 +34,7 @@ export const Counter = (props: CounterPropsType) => {
                 callBack={props.calBackReset}
                 disabled={props.count === props.startValue}
             />
+        </div >
         </div >
     )
 }

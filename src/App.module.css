@@ -1,8 +1,8 @@
 
 .container {
   display: flex;
-  background-image: url('https://weblinks.ru/wp-content/uploads/2022/03/Krasivye-kartinki-na-zadniy-fon-44.jpg');
-  background-repeat: no-repeat;
-  min-width: 100px; 
-  min-height: 500px;
+  justify-content: center;
+  align-items: center;
+  background-image:linear-gradient(#030842 50%, #3f0d9b 90%);
+  min-height: 100vh;
  }

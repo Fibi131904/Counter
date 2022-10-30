@@ -1,24 +1,34 @@
 .counter {
   margin: 50px;
   border: 4px solid grey;
-  width: 250px;
+  width: 400px;
   height: 140px;
   border-radius: 5px;
   text-align: center;
-  background-color: cadetblue;
+  background-image: linear-gradient(#161618 90%, #36353a 50%);
 }
 
-.tablo {
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgb(21, 240, 21);
-  width: 200px;
-  height: 40px;
-  padding: 15px;
-  border: 3px solid grey;
-  font-size: 25px;
+.display {
+
+  background-color: grey;
+  height: 60px;
+  width: 379px;
+  margin: 8px;
+  border: 3px solid rgb(172, 148, 148);
+  font-size: 40px;
   border-radius: 5px;
+  color: #fff;
+  background: radial-gradient(#55ddff, #0081b5);
+}
+
+.buttonBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%px;
+  background-image: linear-gradient(#161618 50%, #36353a 90%);
+  background-color: rgb(29, 32, 32);
 }
 
 .maximum {
